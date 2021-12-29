@@ -3,16 +3,17 @@ import List from './components/List'
 import './App.css';
 import AddToList from './components/AddToList';
 
- function App() {
 
-  interface IState {
-    people: {
-      name: string
-      age: number
-      url: string
-      note?: string
-    }[]
-  }
+export interface IState {
+  people: {
+    name: string
+    age: number
+    url: string
+    note?: string
+  }[]
+}
+
+ function App() {
 
   const [people,setPeople] = useState<IState["people"]>([{
     name: "LeBron James",
@@ -26,7 +27,7 @@ import AddToList from './components/AddToList';
     <div className='App'>
       <h1>People Invited to my Party</h1>
       <List people={people}/>
-      <AddToList/>
+      <AddToList people={people} setPeople={setPeople} />
     </div>
   )
 }

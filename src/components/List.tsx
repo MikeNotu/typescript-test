@@ -1,15 +1,15 @@
 import React from "react";
+import {IState as IProps} from "../App"
 
+// interface IProps {
+//     people: {
+//       name: string
+//       age: number
+//       url: string
+//       note?: string
 
-interface IProps {
-    people: {
-      name: string
-      age: number
-      url: string
-      note?: string
-
-    }[]
-  }
+//     }[]
+//   }
 
  const List: React.FC<IProps>= ({people}) => {
 
