@@ -2,19 +2,16 @@ import React, {useState} from 'react'
 
  function App() {
 
-  const [people,setPeople] = useState([
-    {
-    name: "LeBron James",
-    url: "",
-    age: 36,
-    note: "Allergic to staying on the same team"
-  },
-  {
-    name: "Kobe Bryant",
-    url: "",
-    age: 36
-  },
-])
+  interface IState {
+    people: {
+      name: string
+      age: number
+      url: string
+      note?: string
+    }
+  }
+
+  const [people,setPeople] = useState<{age:number, name: string}[]>([])
 
 const element = people.map(jugador=>{
   return(
