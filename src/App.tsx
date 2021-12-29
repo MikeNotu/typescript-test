@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import List from './components/List'
+import './App.css';
 
  function App() {
 
@@ -8,24 +10,21 @@ import React, {useState} from 'react'
       age: number
       url: string
       note?: string
-    }
+    }[]
   }
 
-  const [people,setPeople] = useState<{age:number, name: string}[]>([])
-
-const element = people.map(jugador=>{
-  return(
-  <p>{jugador.name}</p>
-)})
+  const [people,setPeople] = useState<IState["people"]>([{
+    name: "LeBron James",
+    url:"https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png",
+    age:36,
+    note:"Allergic to staying in the same team"
+  }])
 
 
   return (
     <div className='App'>
       <h1>People Invited to my Party</h1>
-      {element}
-      <h3>hola</h3>
-      <button></button>
-
+      <List people={people}/>
     </div>
   )
 }
