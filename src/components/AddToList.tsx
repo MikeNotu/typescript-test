@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import {IState as Props} from "../App"
+// import {IState as Props} from "../App"
 
 
-interface IProps {
-    people: Props["people"]
-    setPeople: React.Dispatch<React.SetStateAction<Props["people"]>>
-}
+// interface IProps {
+//     people: Props["people"]
+//     setPeople: React.Dispatch<React.SetStateAction<Props["people"]>>
+// }
 
-const AddToList: React.FC<IProps> = ({people, setPeople}) => {
+const AddToList = () => {
+    // const AddToList: React.FC<IProps> = ({people, setPeople}) => {
 
     const [input,setInput] = useState({
         name:"",
@@ -33,15 +34,15 @@ const AddToList: React.FC<IProps> = ({people, setPeople}) => {
             return
         }
 
-        setPeople([
-            ...people,
-            {
-                name:input.name,
-                age: parseInt(input.age),
-                url: input.img,
-                note:input.note
-            }
-        ])
+        // setPeople([
+        //     ...people,
+        //     {
+        //         name:input.name,
+        //         age: parseInt(input.age),
+        //         url: input.img,
+        //         note:input.note
+        //     }
+        // ])
 
 
 
