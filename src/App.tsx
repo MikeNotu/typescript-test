@@ -3,7 +3,8 @@
 import './App.scss';
 // import AddToList from './components/AddToList';
 import SideBarMenu from './components/SideBarMenu';
-
+import { SideBarMenuCard, SideBarMenuItem } from './types/types';
+import {FcAdvertising} from "react-icons/fc"
 
 // export interface IState {
 //   people: {
@@ -23,6 +24,20 @@ import SideBarMenu from './components/SideBarMenu';
   //   note:"Allergic to staying in the same team"
   // }])
 
+  const items:SideBarMenuItem[] = [{
+  id:"1",
+  label:"Hola",
+  icon:FcAdvertising,
+  url:"/"
+  }];
+
+  const card: SideBarMenuCard = {
+    id:"card01",
+    displayName:"Marcos Rivas",
+    title:"Youtuber",
+    photoUrl:"",
+    url:"/"
+  }
 
 
   return (
@@ -32,7 +47,7 @@ import SideBarMenu from './components/SideBarMenu';
       <AddToList people={people} setPeople={setPeople} /> */}
 
       <h1>Test</h1>
-      <SideBarMenu/>
+      <SideBarMenu items={items} card={card}/>
 
     </div>
   )
