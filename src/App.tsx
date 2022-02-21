@@ -4,7 +4,7 @@ import './App.scss';
 // import AddToList from './components/AddToList';
 import SideBarMenu from './components/SideBarMenu';
 import { SideBarMenuCard, SideBarMenuItem } from './types/types';
-import {FcAdvertising} from "react-icons/fc"
+import {FcAdvertising,FcAutomatic,FcChargeBattery} from "react-icons/fc"
 import profileImage from "./bill.jpeg"
 
 // export interface IState {
@@ -35,13 +35,13 @@ import profileImage from "./bill.jpeg"
   {
     id:"2",
     label:"Hola",
-    icon:FcAdvertising,
+    icon:FcAutomatic,
     url:"/"
     },
     {
       id:"3",
       label:"Hola",
-      icon:FcAdvertising,
+      icon:FcChargeBattery,
       url:"/"
       },
 ];
@@ -61,7 +61,6 @@ import profileImage from "./bill.jpeg"
       <List people={people}/>
       <AddToList people={people} setPeople={setPeople} /> */}
 
-      <h1>Test</h1>
       <SideBarMenu items={items} card={card}/>
 
     </div>

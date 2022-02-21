@@ -1,5 +1,7 @@
 import { SideBarMenuItem } from "../types/types";
 import {classNames} from "../util/classes"
+import "./SideBarMenuItemView.scss"
+
 interface SideBarMenuItemViewProps{
     item:SideBarMenuItem;
     isOpen:boolean;
@@ -8,7 +10,7 @@ interface SideBarMenuItemViewProps{
 export default function SideBarMenuItemView({item,isOpen}:SideBarMenuItemViewProps){
     return (
 
-        <div className="SidedBarMenuItem">
+        <div className="SideBarMenuItemView">
             <a href={item.url}>
                 <div className={classNames("ItemContent",isOpen?"":"collapsed")}>
                     <div className="icon">

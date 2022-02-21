@@ -5,6 +5,8 @@ import {VscMenu} from "react-icons/vsc";
 import SideBarMenuItemView from "./SideBarMenuItemView";
 import SideBarMenuCardView from "./SideBarMenuCardView";
 
+import "./SideBarMenu.scss";
+
 interface SideBarMenuProps{
     items:SideBarMenuItem[];
     card: SideBarMenuCard;
@@ -23,7 +25,7 @@ export default function SideBarMenu({items,card}: SideBarMenuProps){
     className={classNames("SideBarMenu",isOpen? "expanded": "collapsed")}>
 
         <div className="menuButton">
-            <button className="hamburgerButton" onClick={handleClick}
+            <button className="hamburgerIcon" onClick={handleClick}
             ><VscMenu />
             </button>
         </div>
