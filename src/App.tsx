@@ -5,6 +5,7 @@ import './App.scss';
 import SideBarMenu from './components/SideBarMenu';
 import { SideBarMenuCard, SideBarMenuItem } from './types/types';
 import {FcAdvertising} from "react-icons/fc"
+import profileImage from "./bill.jpeg"
 
 // export interface IState {
 //   people: {
@@ -24,18 +25,32 @@ import {FcAdvertising} from "react-icons/fc"
   //   note:"Allergic to staying in the same team"
   // }])
 
-  const items:SideBarMenuItem[] = [{
+  const items:SideBarMenuItem[] = [
+    {
   id:"1",
   label:"Hola",
   icon:FcAdvertising,
   url:"/"
-  }];
+  },
+  {
+    id:"2",
+    label:"Hola",
+    icon:FcAdvertising,
+    url:"/"
+    },
+    {
+      id:"3",
+      label:"Hola",
+      icon:FcAdvertising,
+      url:"/"
+      },
+];
 
   const card: SideBarMenuCard = {
     id:"card01",
     displayName:"Marcos Rivas",
     title:"Youtuber",
-    photoUrl:"",
+    photoUrl:profileImage,
     url:"/"
   }
 
